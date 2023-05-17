@@ -1,4 +1,5 @@
 module.exports = {
+    publicPath: "/chat-design-vue/",
     devServer: {
         proxy: {
             '^/clients': {
