@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+$primaryColor: #234460;
+$secondaryColor: #a7b6c3;
+$detail: #ddeaf7;
+$darkGray: #505050;
+$lightGray: #e7e7e7;
+$breakpoints: (
+    sm: 800px,
+    md: 1080px,
+    lg: 1200px
+);
+
+@mixin media-down($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+        @content
+    }
+}
+
+body {
+    padding: 0px !important;
+    margin: 0px !important;
+    font-family: 'Inter', 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+    color: #202020;
+    //overflow: hidden;
+}
+
+input {
+    padding: 10px 18px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    background: #F3F3F3;
+    width: calc(100% - 36px);
+    outline: none;
+}
+
+.topbar {
+    background-color: $primaryColor;
+    height: 85px;
+}
+
+//padding/margin
+.pr-1 {
+    padding-right: 12px;
+}
+
+.pr-2 {
+    padding-right: 18px;
+}
+
+.pl-1 {
+    padding-left: 12px;
+}
+
+.pl-2 {
+    padding-left: 18px;
+}
+
+.pt-1 {
+    padding-top: 12px;
+}
+
+.pt-2 {
+    padding-top: 18px;
+}
+
+.pt-3 {
+    padding-top: 24px;
+}
+
+.pb-1 {
+    padding-bottom: 12px;
+}
+
+.pb-2 {
+    padding-bottom: 18px;
+}
+
+.pb-3 {
+    padding-bottom: 24px;
+}
+
+.pb-4 {
+    padding-bottom: 32px;
+}
+
+.px-1 {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.px-2 {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.py-1 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.py-2 {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.py-3 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.mb-1 {
+    margin-bottom: 15px;
+}
+
+// text
+.display-1 {
+    font-size: 33px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.subtitle-2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.text {
+    font-size: 18px;
+}
+
+.icon-lg {
+    font-size: 30px;
+}
+
+.icon-xl {
+    font-size: 45px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-end {
+    text-align: end;
+}
+
+.headline {
+    font-size: 17px;
+    display: block;
+    font-weight: 500;
+    color: $primaryColor;
+}
+
+.headline-actions {
+    span {
+        display: block;
+        font-size: 22px;
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-bottom: 3px;
+        opacity: 0.7;
+
+        &:hover {
+            background-color: $detail;
+            opacity: 1;
+        }
+    }
+
+    .active {
+        background: $detail;
+        opacity: 1;
+        font-weight: 500;
+    }
+}
+
+//status 
+.end {
+    border-left: 5px solid rgb(18, 194, 112);
+    border-bottom: 3px solid white;
+}
+
+.cancel {
+    border-left: 5px solid rgb(225, 42, 42);
+    border-bottom: 3px solid white;
+}
+
+.in-progress {
+    border-left: 5px solid rgb(81, 68, 197);
+    border-bottom: 3px solid white;
+}
+
+// color text
+.white--text {
+    color: #FCFCFC;
+}
+
+.dark-gray--text {
+    color: $darkGray;
+}
+
+.bold {
+    font-weight: 600
+}
+
+.semi-bold {
+    font-weight: 500
+}
+
+.primary--text {
+    color: $primaryColor;
+}
+
+//bg color
+.primary {
+    background: $primaryColor;
+}
+
+.primary-stroke {
+    stroke: $primaryColor;
+}
+
+.secondary {
+    background: $secondaryColor;
+}
+
+.detail {
+    background: $detail;
+}
+
+.lightGray {
+    background: $lightGray;
+}
+
+//flexbox
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.self-end {
+    align-self: self-end;
+}
+
+.order-1 {
+    order: -1;
+}
+
+//utils
+.pointer {
+    cursor: pointer;
+}
+
+.rounded {
+    border-radius: 50px;
+}
+
+.relative {
+    position: relative;
+}
+
+//
+
+.donloadsvg {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.chats-container {
+    width: 380px;
+    min-width: 380px;
+    background: #f5f5f5;
+
+    img {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    &.reduce {
+        @include media-down(sm) {
+            width: 100px;
+            min-width: 100px;
+        }
+    }
+
+    &.expand {
+        @include media-down(sm) {
+            min-width: 100%;
+        }
+    }
+
+    &.hide {
+        @include media-down(sm) {
+            display: none;
+        }
+    }
+}
+
+.chat-info {
+    width: 320px !important;
+    min-width: 320px !important;
+    background: #f5f5f5;
+    z-index: 10;
+
+    img {
+        width: 130px;
+        height: 130px;
+        object-fit: contain;
+    }
+
+    & .content {
+        overflow-y: scroll;
+    }
+
+    @include media-down(md) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        display: none;
+    }
+
+    &.show {
+        @include media-down(md) {
+            display: block !important;
+        }
+    }
+
+    .chat-info-content {
+        min-height: calc(100vh - 170px);
+        overflow-y: scroll;
+    }
+}
+
+.container {
+    min-height: calc(100vh - 80px);
+}
+
+.messages-tip {
+    font-size: 15px;
+    padding: 3px 9px;
+    background-color: $detail;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.subheader {
+    height: 90px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.btn {
+    font-size: 20px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn.active {
+    opacity: 1 !important;
+}
+
+.option-btn .btn {
+    opacity: 0.5;
+}
+
+.chat-card {
+    border-radius: 2px;
+    padding: 15px 8px;
+
+    &:hover {
+        background-color: $detail;
+    }
+
+    &.active {
+        background: $secondaryColor;
+    }
+}
+
+.subheader img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.chat-thumb {
+    width: 55px;
+
+    img {
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+    }
+}
+
+.chat-message {
+    padding: 10px 20px;
+    border-radius: 12px;
+    max-width: 70%;
+    white-space: break-spaces;
+    font-size: 20px;
+}
+
+.chat-multimedia img {
+    height: 220px;
+    max-width: 500px;
+    object-fit: contain;
+}
+
+.conversation {
+    max-height: calc(100vh - 260px);
+    overflow: auto;
+}
+
+.input-icon svg {
+    position: absolute;
+    right: 6%;
+    bottom: 30%;
+}
+
+.input-chat {
+    font-size: 22px;
+}
+
+//file agent
+.file-red {
+    color: rgb(243, 55, 55);
+    background: rgba(243, 55, 55, 0.1);
+    font-size: 30px;
+    padding: 10px 10px;
+    border-radius: 15px;
+
+}
+
+.file-green {
+    color: rgb(55, 203, 129);
+    background: rgba(55, 203, 129, 0.1);
+    font-size: 30px;
+    padding: 10px 10px;
+    border-radius: 15px;
+
+}
+
+.file-blue {
+    color: rgb(31, 90, 208);
+    background: rgba(31, 90, 208, 0.1);
+    font-size: 30px;
+    padding: 10px 10px;
+    border-radius: 15px;
+
+}
+
+.grid-block-wrapper .grid-block {
+    min-width: 300px !important;
+
+    .file-category-pdf {
+        max-width: 150px;
+    }
+}
+
+.vue-file-agent .file-preview .file-preview-img {
+    width: 300px !important;
+    height: 300px !important;
+    background: white !important;
+    object-fit: cover !important;
+}
+
+.vue-file-agent .file-preview-wrapper:before {
+    background: transparent !important;
+}
+
+.grid-block-wrapper .grid-block .file-preview,
+.file-preview-overlay {
+    border-radius: 15px;
+}
+
+.grid-box-item {
+    -webkit-transition-duration: 0s !important;
+    transition-duration: 0s !important;
+}
+
+// responsive
+.small-devices {
+    display: none;
+
+    @include media-down(md) {
+        display: block;
+    }
+}
+
+.chat-content {
+    &.hide {
+        @include media-down(md) {
+            display: none;
+        }
+    }
+
+}
+
+//scrollbar
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $primaryColor;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
