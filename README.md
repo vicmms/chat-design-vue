@@ -12,10 +12,10 @@ O bien, ejecutar los comandos:
 ### Diseño original
 ![image](https://github.com/vicmms/chat-design-vue/assets/34203591/b6bae257-0754-42cf-a90c-66c3ff9b548d)
 ### Rediseño
-![image](https://github.com/vicmms/chat-design-vue/assets/34203591/cdbbbe51-0ce9-41c3-b8b9-d3ea15172296)
-![image](https://github.com/vicmms/chat-design-vue/assets/34203591/1fb93c65-7d75-4e42-9dfd-55653f5c1ac7)
-![image](https://github.com/vicmms/chat-design-vue/assets/34203591/9fc87ca4-2813-451b-b345-4111777ee752)
-![image](https://github.com/vicmms/chat-design-vue/assets/34203591/9a600088-127a-4bf6-864e-73bd50606358)
+![image](https://github.com/vicmms/chat-design-vue/assets/34203591/be83a0ff-9266-4053-b7f3-a746f08a6095)
+![image](https://github.com/vicmms/chat-design-vue/assets/34203591/dbebc837-b9d8-4a59-94b7-226fbb47587b)
+![image](https://github.com/vicmms/chat-design-vue/assets/34203591/e1e72a1e-e595-4674-8083-4af189096ba9)
+![image](https://github.com/vicmms/chat-design-vue/assets/34203591/d934484b-38ea-4159-a6a5-00ec23cfe4d0)
 
 ### Se creó un mock en figma el cual lo puedes visualizar en el siguiente enlace
 https://www.figma.com/file/xQen26SLpkhYrTVTow3vqs/Untitled?type=design&node-id=0-1&t=EvJo87pZkpSrKc3E-0
