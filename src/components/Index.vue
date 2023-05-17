@@ -20,7 +20,7 @@
 import Chats from "./ChatsSection.vue";
 import ChatContent from "./ChatContentSection.vue";
 import axios from "axios";
-
+import ServerDirections from "../config/server-directions";
 export default {
   data() {
     return {
@@ -37,7 +37,7 @@ export default {
   methods: {
     fetchClients() {
       axios
-        .get("/clients", {})
+        .get(ServerDirections.CLIENTS, {})
         .then((response) => {
           this.clients = response.data.map((item) => {
             return { ...item, status: "end" };
@@ -59,7 +59,7 @@ export default {
     },
     fetchClient1Messages() {
       return axios
-        .get("/client1/messages", {})
+        .get(ServerDirections.CLIENT1_MESSAGES, {})
         .then((response) => {
           this.clients[0]["messages"] = response.data;
         })
@@ -69,7 +69,7 @@ export default {
     },
     fetchClient2Messages() {
       return axios
-        .get("/client2/messages", {})
+        .get(ServerDirections.CLIENT2_MESSAGES, {})
         .then((response) => {
           this.clients[1]["messages"] = response.data;
           // this.clients[1]["messages"] = JSON.parse(
