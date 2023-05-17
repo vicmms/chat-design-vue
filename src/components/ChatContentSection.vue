@@ -6,7 +6,7 @@
     >
       <div class="d-flex subheader align-center pl-2">
         <div class="d-flex align-center">
-          <div @click="hideContentChat()">
+          <div @click="hideContentChat()" class="pointer">
             <i
               class="fa-solid fa-angle-left fa-2xl pr-1 small-devices primary--text"
             ></i>
@@ -40,15 +40,20 @@
               message.message.typeUser !== 'Client' ? 'd-flex justify-end' : ''
             "
           >
-            <avatar
+            <div
               v-if="
                 i === 0 ||
                 chat.messages[i - 1].message.typeUser !==
                   message.message.typeUser
               "
-              :username="chat.name"
-              :size="33"
-            ></avatar>
+            >
+              <avatar
+                v-if="message.message.typeUser == 'Client'"
+                :username="chat.name"
+                :size="33"
+              ></avatar>
+              <img v-else src="../assets/images/chatbot.jpg" alt="" />
+            </div>
           </div>
           <div
             v-if="message.message.multimedia"
@@ -112,7 +117,7 @@
     >
       <div class="d-flex subheader align-center pl-2">
         <div class="title d-flex align-center">
-          <div @click="showInfo = false">
+          <div @click="showInfo = false" class="pointer">
             <i class="fa-solid fa-xmark fa-xs pr-1 small-devices"></i>
           </div>
           Información
