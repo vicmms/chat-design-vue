@@ -72,9 +72,6 @@ export default {
         .get(ServerDirections.CLIENT2_MESSAGES, {})
         .then((response) => {
           this.clients[1]["messages"] = response.data;
-          // this.clients[1]["messages"] = JSON.parse(
-          //   response.data.replace(/,(?=\s*})/g, "")
-          // ); //endpoint response format is wrong, this is for parse response to json format
         })
         .catch((error) => {
           console.log(error);
